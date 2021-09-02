@@ -1,6 +1,6 @@
 {
   "name": "@merged/react-solid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use solid-js Components inside react",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
@@ -34,7 +34,13 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "lint": "eslint --ext ts,tsx --max-warnings 0 --cache src"
+    "lint": "eslint --ext ts,tsx --max-warnings 0 --cache src",
+    "release": "standard-version --no-verify --releaseCommitMessageFormat \"chore(release): Release v{{currentTag}} :rocket:\""
+  },
+  "standard-version": {
+    "scripts": {
+      "posttag": "git push --follow-tags --no-verify origin master"
+    }
   },
   "keywords": [
     "react",
