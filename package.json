@@ -87,5 +87,7 @@
       "@typescript-eslint/no-explicit-any": "off"
     }
   },
-  "dependencies": {}
+  "publishConfig": {
+    "access": "public"
+  }
 }
