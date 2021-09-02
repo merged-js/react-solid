@@ -4,7 +4,7 @@
   "description": "use solid-js Components inside react",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "private": false,
   "homepage": "https://github.com/merged-js/react-solid",
   "repository": {
@@ -24,10 +24,10 @@
   "typesVersions": {
     "*": {
       "plugin": [
-        "./dist/plugin/index.d.ts"
+        "./dist/types/narrowSolidPlugin.d.ts"
       ],
       "*": [
-        "./dist/Solid.d.ts"
+        "./dist/types/Solid.d.ts"
       ]
     }
   },
