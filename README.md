@@ -1,4 +1,4 @@
-# react-solid-bridge
+# @merged/react-solid
 
 A way to use Solid components inside React
 
@@ -29,7 +29,7 @@ export const App: Component = ({ onClick, children }) => (
 *main.tsx (React)*
 ```jsx
 import React from 'react'
-import { Solid } from 'react-solid-bridge'
+import { Solid } from '@merged/react-solid'
 import { App } from './App.tsx' // this is a Solid component
 
 export const ReactComponent = () => {
