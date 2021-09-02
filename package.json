@@ -1,0 +1,90 @@
+{
+  "name": "react-solid-bridge",
+  "version": "1.0.0",
+  "description": "use solid-js Components inside react",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/Torsten85/react-solid-bridge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Torsten85/react-solid-bridge.git"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/Solid.js",
+      "default": "./dist/es/Solid.js"
+    },
+    "./plugin": {
+      "require": "./dist/cjs/narrowSolidPlugin.js",
+      "default": "./dist/es/narrowSolidPlugin.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "plugin": [
+        "./dist/plugin/index.d.ts"
+      ],
+      "*": [
+        "./dist/Solid.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "lint": "eslint --ext ts,tsx --max-warnings 0 --cache src"
+  },
+  "keywords": [
+    "react",
+    "solid"
+  ],
+  "author": "Torsten Blindert",
+  "license": "MIT",
+  "devDependencies": {
+    "@grapes-agency/eslint-config": "^1.5.7",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@rollup/pluginutils": "^4.1.1",
+    "@types/babel__core": "^7.1.15",
+    "@types/node": "^16.7.10",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-delete": "^2.0.0",
+    "solid-js": "^1.1.2",
+    "standard-version": "^9.3.1",
+    "typescript": "^4.4.2",
+    "vite-plugin-solid": "^2.0.3"
+  },
+  "peerDependencies": {
+    "@rollup/pluginutils": "^4.0.0",
+    "react": "^16.0.0 || ^17.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0",
+    "solid-js": "^1.1.2",
+    "vite-plugin-solid": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vite-plugin-solid": {
+      "optional": true
+    },
+    "@rollup/pluginutils": {
+      "optional": true
+    }
+  },
+  "prettier": "@grapes-agency/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": [
+      "@grapes-agency/eslint-config/rules/base",
+      "@grapes-agency/eslint-config/rules/prettier",
+      "@grapes-agency/eslint-config/rules/react"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/consistent-type-assertions": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+  "dependencies": {}
+}
